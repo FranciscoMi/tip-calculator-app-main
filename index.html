@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Calculadora Financiera</h1>
+      <div id="calc_main">
+        <section id="calc_amount">
+          <form name="calc_form" id="calc_form">
+            <label for="form_bill">Facturar</label>
+            <input type="number" name="form_bill" id="form_bill" />
+            <div id="form_Tip">
+              Selecciona Tipo de Interés
+              <input type="button" value="5%" class="btn_Tip" />
+              <input type="button" value="10%" class="btn_Tip" />
+              <input type="button" value="15%" class="btn_Tip" />
+              <input type="button" value="25%" class="btn_Tip" />
+              <input type="button" value="50%" class="btn_Tip" />
+              <input type="text" class="btn_Tip" />
+            </div>
+          </form>
+        </section>
+        <section id="calc_monitor"></section>
+      </div>
+    </main>
+
+    % 5% 10% 15% 25% 50% Custom Number of People Tip Amount / person Total / person Reset
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+      . Coded by
+      <a href="#">Fran</a>
+      .
+    </div>
+  </body>
+</html>
