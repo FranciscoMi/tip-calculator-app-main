@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,8 +7,8 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-    <title>Frontend Mentor | Tip calculator app</title>
-
+    <title>Frontend Mentor | Calculadora de Tipos de Interés</title>
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -23,34 +23,65 @@
   <body>
     <main>
       <h1>Calculadora Financiera</h1>
-      <div id="calc_main">
-        <section id="calc_amount">
-          <form name="calc_form" id="calc_form">
+      <article id="calc_main">
+        <form name="calc_form" id="calc_form">
+          <section id="calc_amount">
             <label for="form_bill">Facturar</label>
-            <input type="number" name="form_bill" id="form_bill" />
+            <div class="text_input_green">
+              <img src="images/icon-dollar.svg" />
+              <input type="number" name="form_bill" id="form_bill" autofocus oninput="operation(this,1)" />
+            </div>
             <div id="form_Tip">
               Selecciona Tipo de Interés
-              <input type="button" value="5%" class="btn_Tip" />
-              <input type="button" value="10%" class="btn_Tip" />
-              <input type="button" value="15%" class="btn_Tip" />
-              <input type="button" value="25%" class="btn_Tip" />
-              <input type="button" value="50%" class="btn_Tip" />
-              <input type="text" class="btn_Tip" />
+              <fieldset>
+                <input type="button" value="5%" class="btn_Tip" />
+                <input type="button" value="10%" class="btn_Tip" />
+                <input type="button" value="15%" class="btn_Tip" />
+                <input type="button" value="25%" class="btn_Tip" />
+                <input type="button" value="50%" class="btn_Tip" />
+                <input type="text" class="btn_Tip" value="Personalizado" onfocus="this.select()" />
+              </fieldset>
             </div>
-          </form>
-        </section>
-        <section id="calc_monitor"></section>
-      </div>
+            <label for="form_People">Número de Usuarios</label>
+            <span id="form_msg">No puede ser cero</span>
+            <div clas="text_input_red">
+              <img src="images/icon-person.svg" />
+              <input type="text" id="form_People" value="0" />
+            </div>
+          </section>
+          <section id="calc_monitor">
+            <div class="monitor_title">
+              Tipo de Interés
+              <br />
+              <span class="title_small">/persona</span>
+            </div>
+            <div id="monitor_Amount" class="monitor_big">
+              <span id="monitor_Amount_Result">0.00</span>
+              €
+            </div>
+            <div class="monitor_title">
+              Total
+              <br />
+              <span class="title_small">/persona</span>
+            </div>
+            <div id="monitor_Total" class="monitor_big">
+              <span id="monitor_Total_Result">0.00</span>
+              €
+            </div>
+            <input type="reset" id="btn_reset" class="btn_Tip" />
+          </section>
+        </form>
+      </article>
     </main>
-
-    % 5% 10% 15% 25% 50% Custom Number of People Tip Amount / person Total / person Reset
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
-      . Coded by
-      <a href="#">Fran</a>
-      .
-    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+        . Coded by
+        <a href="#">Fran</a>
+        .
+      </div>
+    </footer>
   </body>
+  <script src="./js/script.js"></script>
 </html>
