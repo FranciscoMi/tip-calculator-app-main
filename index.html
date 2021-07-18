@@ -23,52 +23,56 @@
   <body>
     <main>
       <h1>Calculadora Financiera</h1>
-      <article id="calc_main">
+      <article class="calc_main">
         <form name="calc_form" id="calc_form">
-          <section id="calc_amount">
-            <label for="form_bill">Facturar</label>
-            <div class="text_input_green">
+          <section id="calc_amount" class="class_section">
+            <label for="form_bill" class="form_label">Facturar</label>
+            <div class="text_input border_green">
               <img src="images/icon-dollar.svg" />
-              <input type="number" name="form_bill" id="form_bill" autofocus oninput="operation(this,1)" />
+              <input type="text" name="form_bill" id="form_bill" class="input_text" autofocus oninput="operation(this,1)" />
             </div>
-            <div id="form_Tip">
-              Selecciona Tipo de Interés
-              <fieldset>
+            <div id="form_Tip" class="form_label">
+              Selecciona Tipo %
+              <fieldset id="form_btn_Tip" class="btn_Tip_main">
                 <input type="button" value="5%" class="btn_Tip" />
                 <input type="button" value="10%" class="btn_Tip" />
                 <input type="button" value="15%" class="btn_Tip" />
                 <input type="button" value="25%" class="btn_Tip" />
                 <input type="button" value="50%" class="btn_Tip" />
-                <input type="text" class="btn_Tip" value="Personalizado" onfocus="this.select()" />
+                <input type="text" class="btn_Tip_custom text_input border_green" value="Personalizado" onfocus="this.select()" />
               </fieldset>
             </div>
-            <label for="form_People">Número de Usuarios</label>
-            <span id="form_msg">No puede ser cero</span>
-            <div clas="text_input_red">
+            <label for="form_People" class="form_label">
+              Número de Usuarios
+              <span id="form_msg">No puede ser cero</span>
+            </label>
+            <div class="text_input border_red">
               <img src="images/icon-person.svg" />
-              <input type="text" id="form_People" value="0" />
+              <input type="text" id="form_People" class="input_text" value="0" />
             </div>
           </section>
-          <section id="calc_monitor">
-            <div class="monitor_title">
-              Tipo de Interés
-              <br />
-              <span class="title_small">/persona</span>
+          <section id="calc_monitor" class="class_section">
+            <div>
+              <div class="monitor_title">
+                Interés
+                <br />
+                <span class="title_small">/persona</span>
+              </div>
+              <div id="monitor_Amount" class="monitor_big">
+                <span id="monitor_Amount_Result">0.00</span>
+                €
+              </div>
+              <div class="monitor_title">
+                Total
+                <br />
+                <span class="title_small">/persona</span>
+              </div>
+              <div id="monitor_Total" class="monitor_big">
+                <span id="monitor_Total_Result">0.00</span>
+                €
+              </div>
             </div>
-            <div id="monitor_Amount" class="monitor_big">
-              <span id="monitor_Amount_Result">0.00</span>
-              €
-            </div>
-            <div class="monitor_title">
-              Total
-              <br />
-              <span class="title_small">/persona</span>
-            </div>
-            <div id="monitor_Total" class="monitor_big">
-              <span id="monitor_Total_Result">0.00</span>
-              €
-            </div>
-            <input type="reset" id="btn_reset" class="btn_Tip" />
+            <input type="reset" id="btn_reset" class="btn_reset" />
           </section>
         </form>
       </article>
