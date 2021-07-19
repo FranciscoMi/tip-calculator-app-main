@@ -105,6 +105,19 @@ div.text_input {
   background-color: hsl(189, 41%, 97%);
 }
 
+.btn_Tip_selected {
+  background-color: hsl(185, 41%, 56%);
+  padding: 10px;
+  border-style: none;
+  border-radius: 5px;
+  width: calc(100% - 246px);
+  color: white;
+  font-weight: 700;
+  margin: 5px 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .btn_Tip_custom {
   text-align: right;
   padding: 10px;

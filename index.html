@@ -29,7 +29,7 @@
             <label for="form_bill" class="form_label">Facturar</label>
             <div class="text_input border_green">
               <img src="images/icon-dollar.svg" />
-              <input type="number" name="form_bill" id="form_bill" class="input_text" autofocus />
+              <input type="number" name="form_bill" id="form_bill" class="input_text" min="0" autofocus />
               <!--oninput="operation(this.form,1)"-->
             </div>
             <div id="form_Tip" class="form_label">
@@ -40,7 +40,7 @@
                 <input type="button" name="tip" value="10%" class="btn_Tip" onclick="calcform(this)" />
                 <input type="button" name="tip" value="25%" class="btn_Tip" onclick="calcform(this)" />
                 <input type="button" name="tip" value="50%" class="btn_Tip" onclick="calcform(this)" />
-                <input type="text" name="tip" class="btn_Tip_custom text_input border_green" onfocus="this.select()" oninput="calcform(this)" />
+                <input type="number" name="tip" class="btn_Tip_custom text_input border_green" min="0" max="100" onfocus="this.select()" oninput="calcform(this)" />
               </fieldset>
             </div>
             <label for="form_People" class="form_label">
