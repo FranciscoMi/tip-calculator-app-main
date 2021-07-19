@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 * {
+  /*Para toda la pagina aplicamos estos parámetros por defecto*/
   box-sizing: border-box;
   --sizemonitor: 400px;
-  /*--sizecal: 50%;*/
   font-family: "Space Mono", monospace;
   font-size: 14px;
   font-weight: 500;
@@ -19,6 +19,21 @@ h1 {
   margin-right: auto;
 }
 
+/*Eliminamos las flechitas del input number*/
+/*Para navegadores Firefox*/
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+  outline: none;
+}
+
+/*Para navegadores Chrome*/
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/*Formato de la caja principal*/
 .calc_main {
   position: relative;
   background-color: hsl(0, 0%, 100%);
@@ -28,9 +43,8 @@ h1 {
   margin-left: auto;
   margin-right: auto;
 }
-.form_label {
-  display: block;
-}
+
+/*Formato de las cajas de texto*/
 div.text_input {
   padding: 10px 10px 5px 10px;
   margin: 0 0 20px 0;
@@ -63,6 +77,7 @@ div.text_input {
   width: 95%;
 }
 
+/*Formato de la sección de botones Tip*/
 .btn_Tip_main {
   border-style: none;
   padding: 0 0 20px 0;
@@ -101,22 +116,14 @@ div.text_input {
   font-size: 20px;
 }
 
+/*Formato inicial de la caja de mensajes*/
 #form_msg {
   float: right;
   color: red;
   text-align: right;
 }
 
-#calc_amount {
-  float: left;
-}
-#calc_monitor {
-  background-color: hsl(183, 100%, 15%);
-  border-radius: 20px;
-  float: right;
-  /*width: calc(var(--sizemonitor)-100%);*/
-}
-
+/*Tratamos de que las dos secciones principales tengan el mismo formato*/
 .class_section {
   position: relative;
   width: var(--sizemonitor);
@@ -124,7 +131,16 @@ div.text_input {
   margin: 20px;
 }
 
+/*Colocamos la sección de introducción de datos a la izquierda flotando para que no se descentren los elementos*/
+/*Con Flexbox es más facil, pero estoy empezando y es mejor para entender conceptos. ;D*/
+#calc_amount {
+  float: left;
+}
+/*Formato de la sección del monitor donde se muestran los datos*/
 #calc_monitor {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 20px;
+  float: right;
   padding: 10px 20px;
 }
 
