@@ -1,10 +1,7 @@
-/*function operation(id, interes) {
-  console.log(id)
-  let resultado = id.value / parseInt(document.getElementById("form_People").value)
-  let nuevoInteres = interes * resultado
-  document.getElementById("monitor_Amount_Result").innerText = resultado.toFixed(2)
-  document.getElementById("monitor_Total_Result").innerText = nuevoInteres.toFixed(2)
-}*/
+function restablecer() {
+  document.getElementById("monitor_Amount_Result").innerText = "0.00"
+  document.getElementById("monitor_Total_Result").innerText = "0.00"
+}
 
 function calcform(formCalc) {
   //Primero comprobamos que se haya escrito al menos, un usuario
@@ -16,6 +13,13 @@ function calcform(formCalc) {
     return 0
   }
 
+  //Luego comprobamos que se haya metido un valor en el campo Facturar
+  const campoFacturar = parseFloat(document.calc_form.form_bill.value)
+  if (isNaN(campoFacturar)) {
+    msg.innerText = "Falta valor a facturar"
+    return 0
+  }
+
   //Recogemos los datos que forman parte del fieldset
   let valor = parseInt(formCalc.value)
   if (isNaN(valor) || valor < 0 || valor > 100) {
@@ -23,22 +27,25 @@ function calcform(formCalc) {
     return 0
   }
   valor *= 0.01
-
   //Reestablecemos los colores del grupo de botones y cambiamos el seleccionado
-  if (formCalc.querySelector("input[type='button']")) {
-    console.log(document.querySelector('input[type="button"].btn_Tip_selected'))
+  if (formCalc.type === "button") {
     if (document.querySelector("input.btn_Tip_selected")) {
       document.querySelector("input.btn_Tip_selected").className = "btn_Tip"
     }
     formCalc.className = "btn_Tip_selected"
   }
+
   //Calculamos el tipo de Interés/persona
   const facturar = parseFloat(calc_form.form_bill.value)
   if (isNaN(facturar)) {
     msg.innerText = " Facturación incorrecta"
   }
-  const tip = (facturar * valor) / usuario
+  //Sacamos el tipo de interes
+  let tip = (facturar * valor) / usuario
+  //Truncamos el tipo de interés a 2 decimales utilizando expresiones regulares
+  const regex = /^\d+(\.\d{0,2})?/
+  let tipString = tip.toString().match(regex)[0]
   const total = facturar / usuario + tip
-  document.getElementById("monitor_Amount_Result").innerText = tip.toFixed(2)
+  document.getElementById("monitor_Amount_Result").innerText = parseFloat(tipString).toFixed(2)
   document.getElementById("monitor_Total_Result").innerText = total.toFixed(2)
 }

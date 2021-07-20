@@ -189,6 +189,7 @@ div.text_input {
 .btn_reset {
   width: 90%;
   margin: 20px;
+  padding: 10px;
   background-color: hsl(183, 40%, 43%);
   border-style: none;
   color: hsl(183, 100%, 15%);
