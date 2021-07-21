@@ -27,12 +27,14 @@
         <form name="calc_form" id="calc_form">
           <section id="calc_amount" class="class_section">
             <label for="form_bill" class="form_label">Facturar</label>
+            <span id="form_msg_bill" class="form_msg"></span>
             <div class="text_input border_green">
-              <img src="images/icon-dollar.svg" />
+              <img src="images/icon-euro.svg" />
               <input type="number" name="form_bill" id="form_bill" class="input_text" min="0" value="0" autofocus />
             </div>
             <div id="form_Tip" class="form_label">
               Selecciona Tipo %
+              <span id="form_msg_Tip" class="form_msg"></span>
               <fieldset class="btn_Tip_main">
                 <input type="button" name="tip" value="5%" class="btn_Tip" onclick="calcform(this)" />
                 <input type="button" name="tip" value="15%" class="btn_Tip" onclick="calcform(this)" />
@@ -44,7 +46,7 @@
             </div>
             <label for="form_People" class="form_label">
               Número de Usuarios
-              <span id="form_msg"></span>
+              <span id="form_msg_user" class="form_msg"></span>
             </label>
             <div class="text_input border_red">
               <img src="images/icon-person.svg" />

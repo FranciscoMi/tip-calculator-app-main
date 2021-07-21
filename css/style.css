@@ -2,6 +2,7 @@
 * {
   /*Para toda la pagina aplicamos estos parámetros por defecto*/
   box-sizing: border-box;
+  margin: 0;
   --sizemonitor: 400px;
   font-family: "Space Mono", monospace;
   font-size: 14px;
@@ -38,7 +39,7 @@ input[type="number"]::-webkit-inner-spin-button {
   position: relative;
   background-color: hsl(0, 0%, 100%);
   border-radius: 20px;
-  width: 880px;
+  width: 840px;
   overflow: auto;
   margin-left: auto;
   margin-right: auto;
@@ -74,7 +75,7 @@ div.text_input {
   font-weight: 700;
   font-size: 20px;
   color: hsl(183, 100%, 15%);
-  width: 95%;
+  width: 90%;
 }
 
 /*Formato de la sección de botones Tip*/
@@ -82,6 +83,8 @@ div.text_input {
   border-style: none;
   padding: 0 0 20px 0;
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .btn_Tip {
@@ -130,7 +133,7 @@ div.text_input {
 }
 
 /*Formato inicial de la caja de mensajes*/
-#form_msg {
+.form_msg {
   float: right;
   color: red;
   text-align: right;
@@ -141,7 +144,7 @@ div.text_input {
   position: relative;
   width: var(--sizemonitor);
   padding: 0 20px;
-  margin: 20px;
+  margin: 10px;
 }
 
 /*Colocamos la sección de introducción de datos a la izquierda flotando para que no se descentren los elementos*/
@@ -203,4 +206,25 @@ div.text_input {
 
 .btn_reset:active {
   background-color: hsl(183, 100%, 15%);
+}
+
+@media only screen and (max-width: 840px) {
+  .calc_main {
+    min-width: 370px;
+    width: auto;
+  }
+
+  .class_section {
+    width: 95%;
+  }
+
+  .btn_Tip {
+    width: 31%;
+  }
+  .btn_Tip_selected {
+    width: 31%;
+  }
+  .btn_Tip_custom {
+    width: 31%;
+  }
 }
