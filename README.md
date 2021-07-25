@@ -13,6 +13,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -34,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Github URL: [Github repository ](https://github.com/FranciscoMi/tip-calculator-app-main)
-- Live URL: [Code Pen Proyect] (https://codepen.io/franciscomi/project/full/DxpMbv)
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
