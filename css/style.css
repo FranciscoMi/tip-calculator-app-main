@@ -1,20 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 * {
   /*Para toda la pagina aplicamos estos parámetros por defecto*/
   box-sizing: border-box;
   margin: 0;
   --sizemonitor: 400px;
-  font-family: "Space Mono", monospace;
-  font-size: 14px;
-  font-weight: 500;
 }
 body {
   background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
 }
 
 h1 {
   text-align: center;
   font-size: 24px;
+  font-weight: 400;
   width: 200px;
   margin-left: auto;
   margin-right: auto;
@@ -26,7 +26,6 @@ h1 {
 input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
-  margin: 0;
   outline: none;
 }
 
@@ -40,12 +39,13 @@ input[type="number"]::-webkit-inner-spin-button {
   position: relative;
   background-color: hsl(0, 0%, 100%);
   border-radius: 20px;
-  width: 840px;
+  width: 850px;
   overflow: auto;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 /*Formato de las cajas de texto*/
@@ -70,15 +70,16 @@ div.text_input {
 }
 
 .input_text {
+  position: relative;
   float: right;
+  top: -5px;
   border-style: none;
   background-color: transparent;
-  height: 20px;
   text-align: right;
   font-weight: 700;
-  font-size: 20px;
-  color: hsl(183, 100%, 15%);
-  width: 90%;
+  font-size: 26px;
+  color: hsl(183, 100%, 20%);
+  width: calc(100% - 25px);
 }
 
 /*Formato de la sección de botones Tip*/
@@ -95,7 +96,7 @@ div.text_input {
   padding: 10px;
   border-style: none;
   border-radius: 5px;
-  width: calc(100% - 246px);
+  width: calc(100% - 250px);
   color: white;
   font-weight: 700;
   margin: 5px 0;
@@ -116,7 +117,7 @@ div.text_input {
   padding: 10px;
   border-style: none;
   border-radius: 5px;
-  width: calc(100% - 246px);
+  width: calc(100% - 250px);
   color: white;
   font-weight: 700;
   margin: 5px 0;
@@ -129,10 +130,15 @@ div.text_input {
   padding: 10px;
   border-style: solid;
   border-radius: 5px;
-  width: calc(100% - 246px);
+  width: calc(100% - 250px);
   font-weight: 700;
   margin: 5px 0;
   font-size: 20px;
+}
+
+/*aplicada una expresión regular al html del "custom", cambiamos el borde a rojo cuando se introducen datos incorrectos, o verde si son correctos*/
+.btn_Tip_Custom:invalid {
+  border: red solid 1px;
 }
 
 /*Formato inicial de la caja de mensajes*/
@@ -211,10 +217,11 @@ div.text_input {
   background-color: hsl(183, 100%, 15%);
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 850px) {
   .calc_main {
-    min-width: 370px;
+    min-width: 350px;
     width: auto;
+    margin: 10px;
   }
 
   .class_section {

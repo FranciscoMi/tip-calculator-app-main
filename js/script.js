@@ -10,6 +10,8 @@ function calcform(formCalc) {
     clase.innerText = ""
   })
 
+  // Validamos la longitud de los campos
+
   //Comprobamos que se haya escrito al menos, un usuario
   msg = document.getElementById("form_msg_user")
   const usuario = document.calc_form.form_People.value
