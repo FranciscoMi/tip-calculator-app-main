@@ -10,6 +10,7 @@
       .attribution {
         font-size: 11px;
         text-align: center;
+        padding: 1em;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -18,6 +19,7 @@
   </head>
   <body>
     <main>
+      <div id="div_float"></div>
       <h1>Calculadora Financiera</h1>
       <article class="calc_main">
         <form name="calc_form" id="calc_form">
@@ -25,7 +27,7 @@
             <label for="form_bill" class="form_label">Facturar</label>
             <span id="form_msg_bill" class="form_msg"></span>
             <div class="text_input border_green">
-              <img src="images/icon-euro.svg" alt="icon euro" />
+              <img src="images/icon-euro.svg" alt="euro" />
               <input type="number" name="form_bill" id="form_bill" class="input_text" min="0" placeholder="0" autofocus />
             </div>
             <div id="form_Tip" class="form_label">
@@ -45,7 +47,7 @@
               <span id="form_msg_user" class="form_msg"></span>
             </label>
             <div class="text_input border_red">
-              <img src="images/icon-person.svg" alt="icon person" />
+              <img src="images/icon-person.svg" alt="user" />
               <input type="number" name="form_People" id="form_People" class="input_text" placeholder="0" />
             </div>
           </section>
@@ -74,16 +76,16 @@
           </section>
         </form>
       </article>
+      <footer>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+          . Coded by
+          <a href="https://www.frontendmentor.io/profile/FranciscoMi">FranciscoMi</a>
+          .
+        </div>
+      </footer>
     </main>
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
-        . Coded by
-        <a href="https://www.frontendmentor.io/profile/FranciscoMi">FranciscoMi</a>
-        .
-      </div>
-    </footer>
     <script src="./js/script.js"></script>
   </body>
 </html>
