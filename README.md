@@ -35,16 +35,17 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Solution](https://github.com/FranciscoMi/tip-calculator-app-main)
+- Live Site URL: [CodeSandBox](https://rj8p9.csb.app/)
 
 ## My process
 
 - (07-16-2021): Project start
 - (07-17-2021): HTML file creation
 - (07-18-2021): Added CSS. Try not to use Flexbox
-- (19_07-2021): Js code started
+- (07-19-2021): Js code started
 - (07-21-2021): Beginning of adaptation to mobiles. Media Queries
+- (07-26-2021): Add Placeholder and Vertical Align
 
 ### Built with
 
