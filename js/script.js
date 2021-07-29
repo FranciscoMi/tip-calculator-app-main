@@ -27,8 +27,8 @@ function calcform(formCalc) {
 
   //Recogemos los datos que forman parte del campo Facturar según el cuadro que estemos tecleando
   msg = document.getElementById("form_msg_Tip")
-  let valor = parseInt(formCalc.value)
   let input_txt = formCalc.name
+  let valor = 0
   switch (input_txt) {
     case "tip":
       //Reestablecemos los colores del grupo de botones y cambiamos el seleccionado
@@ -39,7 +39,8 @@ function calcform(formCalc) {
         formCalc.className = "btn_Tip_selected"
         document.getElementById("form_custom").value = ""
       }
-
+      //Sacamos el valor del tipo de interés acorde al botón pulsado
+      valor = parseInt(formCalc.value)
       if (isNaN(valor)) {
         msg.innerText = "Valor no entero"
         return 0
