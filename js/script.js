@@ -25,10 +25,10 @@ function calcform(formCalc) {
     return 0
   }
 
-  //Recogemos los datos que forman parte del campo Facturar según el cuadro que estemos tecleando
+  //Recogemos los datos que forman parte del campo Facturar según el Tipo seleccionado
   msg = document.getElementById("form_msg_Tip")
   let input_txt = formCalc.name
-  let valor = 0
+  let valor
   switch (input_txt) {
     case "tip":
       //Reestablecemos los colores del grupo de botones y cambiamos el seleccionado
@@ -48,7 +48,19 @@ function calcform(formCalc) {
         msg.innerText = "Valores (0 - 100)"
         return 0
       }
-  }
+      break
+    case "form_bill":
+    case "form_People":
+      let collection = document.getElementsByClassName("btn_Tip_selected")
+      console.log(collection)
+      if (collection.length != 0) {
+        valor = parseInt(collection.item(0).value)
+      } else if (document.getElementById("form_custom").value != "") {
+        valor = parseInt(document.getElementById("form_custom").value)
+      } else {
+        valor = 0
+      }
+  } //fin switch
   valor *= 0.01
   showValue(valor, usuario)
 }
