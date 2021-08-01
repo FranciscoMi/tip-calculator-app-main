@@ -33,7 +33,7 @@
             <div id="form_Tip" class="form_label">
               Tipo %
               <span id="form_msg_Tip" class="form_msg"></span>
-              <fieldset class="btn_Tip_main">
+              <fieldset class="btn_Tip_main" title="Tip">
                 <input type="button" name="tip" value="5%" class="btn_Tip" onclick="calcform(this)" />
                 <input type="button" name="tip" value="15%" class="btn_Tip" onclick="calcform(this)" />
                 <input type="button" name="tip" value="10%" class="btn_Tip" onclick="calcform(this)" />
@@ -47,7 +47,7 @@
                   min="0"
                   max="100"
                   step="1"
-                  patern="[0-9]{2}"
+                  pattern="[0-9]{2}"
                   onfocus="this.select()"
                   oninput="calcform(this)"
                 />
